@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+section{
+    max-width: min-content;
+    height: auto;
+    margin: 15vh auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.2);
+}
+#clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    height: auto;
+    color: #fff;
+    font-size: 3rem;
+    gap: 6px;
+}
+#clock .time{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #3d3d3d;
+    background-color: #fff;
+}#clock .time p{
+    font-size: 1rem;
+}
+#ampm{
+    display: none;
+    font-size: 1.6rem;
+}
+#settings{
+    display: none;
+    gap: 10px;
+    align-items: center;
+    margin: 40px 0 10px;
+    color: #fff;
+    font-weight: 500;
+}
+#settings input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+#settings input[type="checkbox"]::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    transform: scale(0);
+    transition: 0.1s transform ease-in-out;
+    box-shadow: inset 10px 10px #fff;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+#settings input[type="checkbox"]:checked{
+    background-color: #3d3d3d;
+}
+#settings input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+#settings-btn{
+    cursor: pointer;
+    padding: 0.2rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#icon-settings{
+    font-size: 2rem;
+    transition: 0.2s;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
+#settings-btn:hover #icon-settings{
+    transform: rotateZ(45deg);
+}
+footer{
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 500;
+}

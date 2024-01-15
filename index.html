@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b15cfa2d08.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <div id="clock">
+            <div class="time">
+                <div id="hours">00</div>
+                <p>Horas</p>
+            </div>
+            <span>:</span>
+            <div class="time">
+                <div id="minutes">00</div>
+                <p>Minutos</p>
+            </div>
+            <span>:</span>
+            <div class="time">
+                <div id="seconds">00</div>
+                <p>Segundos</p>
+            </div>
+            <div id="ampm">AM</div>
+        </div>
+        <div id="settings">
+            <p>Sistema de horário 12 horas</p>
+            <input type="checkbox" name="ampmcheckbox" id="ampmcheckbox">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Sebastião Fellipe</p>
+    </footer>
+    <div id="settings-btn" onclick="toggleSettings()">
+        <i id="icon-settings" class="fa-solid fa-gear" style="color: #ffffff;"></i>
+    </div>
+</body>
+</html>
